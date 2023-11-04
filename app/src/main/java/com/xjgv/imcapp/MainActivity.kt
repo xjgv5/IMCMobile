@@ -1,5 +1,6 @@
 package com.xjgv.imcapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,8 +17,10 @@ class MainActivity : AppCompatActivity() {
         btnStart.setOnClickListener {
             val name = editTxt.text.toString()
 
-            if (name.isNullOrEmpty()){
-                Log.i("xjgv","Boton presionado")
+            if (name.isNotEmpty()){
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("EXTRA_NAME", name)
+                startActivity(intent)
             }
         }
     }

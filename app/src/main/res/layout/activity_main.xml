@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -20,15 +21,17 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edtText"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="200dp"
         android:maxLines="1"
         android:singleLine="true"
+        android:textColor="@color/black"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@id/btnStart"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView1" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnStart"
